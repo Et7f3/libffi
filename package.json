@@ -4,7 +4,7 @@
   "esy": {
     "build": [
       "find ./ -exec touch -t 200905010101 {} +",
-      ["bash", "-c", "#{os == 'windows' ? './configure --enable-shared --prefix $cur__install --host=x86_64-w64-mingw32 --build=x86_64-unknown-cygwin' : './configure --enable-shared --prefix $cur__install' }"],
+      ["bash", "-c", "./configure --enable-shared --prefix $cur__install --host=x86_64-w64-mingw32 --build=x86_64-unknown-cygwin"],
       "make"
     ],
     "install": [
